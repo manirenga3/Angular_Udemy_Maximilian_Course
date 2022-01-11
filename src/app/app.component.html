@@ -1,0 +1,22 @@
+<!-- <button (click)="showSecret = !showSecret">Display Details</button> -->
+<!-- Using increment number -->
+<!-- <button (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Password: 1234</p>
+<div
+  *ngFor="let logItem of logs"
+  [ngStyle]="{ backgroundColor: logItem >= 5 ? 'blue' : 'white' }"
+  [ngClass]="{ 'white-text': logItem >= 5 }"
+>
+  {{ logItem }}
+</div> -->
+
+<!-- Using timestamp in event object -->
+<button (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Password: 1234</p>
+<div
+  *ngFor="let logItem of logs; let i = index"
+  [ngStyle]="{ backgroundColor: i + 1 >= 5 ? 'blue' : 'white' }"
+  [ngClass]="{ 'white-text': i + 1 >= 5 }"
+>
+  {{ logItem }}
+</div>
