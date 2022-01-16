@@ -1,0 +1,5 @@
+<ng-container *ngIf="user">
+  <p>User with ID {{ user.id }} loaded.</p>
+  <p>User name is {{ user.name }}</p>
+  <a [routerLink]="['/users', 23, 'Mani']">Load Mani (23)</a>
+</ng-container>
